@@ -35,7 +35,7 @@ export function Auth() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: window.location.origin
+        redirectTo: "https://noteme-one.vercel.app",
       }
     });
     
