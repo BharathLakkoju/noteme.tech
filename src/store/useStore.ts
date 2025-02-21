@@ -36,6 +36,7 @@ export const useStore = create<Store>()(
       settings: {
         vimMode: false,
         darkMode: false,
+        isSearchOpen: false
       },
       isSearchOpen: false,
 

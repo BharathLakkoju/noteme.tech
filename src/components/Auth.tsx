@@ -35,7 +35,7 @@ export function Auth() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: "https://noteme-one.vercel.app",
+        redirectTo: "https://noteme-one.vercel.app/*",
       }
     });
     
@@ -63,7 +63,7 @@ export function Auth() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`mt-1 block w-full rounded-md ${
+              className={`mt-1 p-2 block w-full rounded-md ${
                 settings.darkMode
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'border-gray-300'
@@ -79,7 +79,7 @@ export function Auth() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className={`mt-1 block w-full rounded-md ${
+              className={`mt-1 p-2 block w-full rounded-md ${
                 settings.darkMode
                   ? 'bg-gray-700 border-gray-600 text-white'
                   : 'border-gray-300'
